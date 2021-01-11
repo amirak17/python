@@ -1,128 +1,140 @@
-# A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Rules for Python variables:
-# A variable name must start with a letter or the underscore character
-# A variable name cannot start with a number
-# A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
-# Variable names are case-sensitive (age, Age and AGE are three different variables)
+# a variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). rules for python variables:
+# a variable name must start with a letter or the underscore character
+# a variable name cannot start with a number
+# a variable name can only contain alpha-numeric characters and underscores (a-z, 0-9, and _ )
+# variable names are case-sensitive (age, age and age are three different variables)
 
-
+print('simple assignment')
 x = 5
-y = "John"
+y = "john"
 print(x)
 print(y)
-print('----')
+print('\n----\n')
 
+print('new type assignment')
 x = 4       # x is of type int
-x = "Sally" # x is now of type str
+x = "sally" # x is now of type str
 print(x)
-print('----')
+print('\n----\n')
 
+print('specify types')
 x = str(3)    # x will be '3'
 y = int(3)    # y will be 3
 z = float(3)  # z will be 3.0
 print(x)
 print(y)
 print(z)
-print('----')
+print('\n----\n')
 
+print('show data type')
 x = 5
-y = "John"
+y = "john"
 print(type(x))
 print(type(y))
-print('----')
+print('\n----\n')
 
-x = "John"
+print('both types of quotes are same')
+x = "john"
 print(x)
 # is the same as
-x = 'John'
+x = 'john'
 print(x)
-print('----')
+print('\n----\n')
 
+print('case matters')
 a = 4
-A = "Sally"
+a = "sally"
 print(a)
-print(A)
-#A will not overwrite a
-print('----')
+print(a)
+#a will not overwrite a
+print('\n----\n')
 
-# Legal variable names:
-myvar = "John"
-my_var = "John"
-_my_var = "John"
-myVar = "John"
-MYVAR = "John"
-myvar2 = "John"
+print('legal variable names')
+myvar = "john"
+my_var = "john"
+_my_var = "john"
+myvar = "john"
+myvar = "john"
+myvar2 = "john"
 
-# Many Values to Multiple Variables
-# Python allows you to assign values to multiple variables in one line:
-x, y, z = "Orange", "Banana", "Cherry"
+# many values to multiple variables
+# python allows you to assign values to multiple variables in one line:
+print('multiple assignment to vars')
+x, y, z = "orange", "banana", "cherry"
 print(x)
 print(y)
 print(z)
-print('----')
+print('\n----\n')
 
-x = y = z = "Orange"
+print('single assignment to vars')
+x = y = z = "orange"
 print(x)
 print(y)
 print(z)
-print('----')
+print('\n----\n')
 
-# Unpack Collection
+print('unpack collection')
 fruits = ["apple", "banana", "cherry"]
 x, y, z = fruits
 print(x)
 print(y)
 print(z)
-print('----')
+print('\n----\n')
 
-# You can also use the + character to add a variable to another variable:
+# you can also use the + character to add a variable to another variable:
+print('plus sign to add str vars eg 1')
 x = "awesome"
-print("Python is " + x)
-print('----')
+print("python is " + x)
+print('\n----\n')
 
-x = "Python is "
+print('plus sign to add str vars eg 2')
+x = "python is "
 y = "awesome"
 z =  x + y
 print(z)
-print('----')
+print('\n----\n')
 
-# For numbers, the + character works as a mathematical operator:
+# for numbers, the + character works as a mathematical operator:
+print('plus sign to add numbers')
 x = 5
 y = 10
 print(x + y)
-print('----')
+print('\n----\n')
 
-# If you try to combine a string and a number, Python will give you an error:
+# if you try to combine a string and a number, python will give you an error:
 # x = 5
-# y = "John"
+# y = "john"
 # print(x + y)
 
-# Global Variables
+print('global variables eg 1')
 x = "awesome"
 def myfunc1():
-  print("Python is " + x)
+  print("python is " + x)
 myfunc1()
-print('----')
+print('\n----\n')
 
+print('global variables eg 2')
 x = "awesome"
 def myfunc2():
   x = "fantastic"
-  print("Python is " + x)
+  print("python is " + x)
 myfunc2()
-print("Python is " + x)
-print('----')
+print("python is " + x)
+print('\n----\n')
 
+print('global variables eg 3')
 def myfunc3():
   global x
   x = "fantastic"
 myfunc3()
-print("Python is " + x)
-print('----')
+print("python is " + x)
+print('\n----\n')
 
-# change the value of a global variable inside a function
+print('change global variables inside fn')
 x = "awesome"
 def myfunc4():
   global x
   x = "fantastic"
 myfunc4()
-print("Python is " + x)
-print('----')
+print("python is " + x)
+print('\n----\n')
