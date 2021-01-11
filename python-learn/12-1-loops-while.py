@@ -6,8 +6,7 @@ while loops
 for loops
 """
 # the while loop
-# print i as long as i is less than 6:
-
+print('print i as long as i is less than 6')
 i = 1
 while i < 6:
   print(i)
@@ -15,7 +14,7 @@ while i < 6:
 
 print('\n----\n')
 
-# the break statement
+print('the break statement')
 i = 1
 while i < 6:
   print(i)
@@ -25,7 +24,7 @@ while i < 6:
 
 print('\n----\n')
 
-# the continue statement
+print('the continue statement')
 i = 0
 while i < 6:
   i += 1
@@ -35,7 +34,7 @@ while i < 6:
 
 print('\n----\n')
 
-# the else statement
+print('the else statement')
 i = 1
 while i < 6:
   print(i)

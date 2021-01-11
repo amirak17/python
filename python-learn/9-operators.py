@@ -11,7 +11,7 @@ Arithmetic Operators: used with numeric values to perform common mathematical op
 **	Exponentiation	x ** y
 //	Floor division	x // y
 """
-
+print('arithmetic operators')
 print(10+5)
 print(10-5)
 print(10*5)

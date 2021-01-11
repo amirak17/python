@@ -26,34 +26,35 @@ reverse()	Reverses the order of the list
 sort()	    Sorts the list
 """
 
+print('show list')
 thislist = ["apple", "banana", "cherry"]
 print(thislist)
 print('\n----\n')
 
-# access a member
+print('access a member')
 thislist = ["apple", "banana", "cherry"]
 print(thislist[1])
 print('\n----\n')
 
-# change a member eg, 1
+print('change a member eg, 1')
 thislist = ["apple", "banana", "cherry"]
 thislist[1] = "blackcurrant"
 print(thislist)
 print('\n----\n')
 
-# change a member eg, 2
+print('change a member eg, 2')
 thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
 thislist[1:3] = ["blackcurrant", "watermelon"]
 print(thislist)
 print('\n----\n')
 
-# change a member eg, 3
+print('change a member eg, 3')
 thislist = ["apple", "banana", "cherry"]
 thislist[1:2] = ["blackcurrant", "watermelon"]
 print(thislist)
 print('\n----\n')
 
-# change a member eg, 4
+print('change a member eg, 4')
 thislist = ["apple", "banana", "cherry"]
 thislist[1:3] = ["watermelon"]
 print(thislist)

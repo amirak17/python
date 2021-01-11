@@ -1,59 +1,61 @@
 
-print("Hello")
-print('Hello')
+print("hello")
+print('hello')
 print('\n----\n')
 
-a = "Hello"
+a = "hello"
 print(a)
 print('\n----\n')
 
-# Multiline Strings
-a = """Lorem ipsum dolor sit amet,
+print('multiline strings double quotes')
+a = """lorem ipsum dolor sit amet,
 consectetur adipiscing elit,
 sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua."""
 print(a)
 print('\n----\n')
 
-a = '''Lorem ipsum dolor sit amet,
+print('multiline strings single quotes')
+a = '''lorem ipsum dolor sit amet,
 consectetur adipiscing elit,
 sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua.'''
 print(a)
 print('\n----\n')
 
-a = "Hello, World!"
+print('first char of string')
+a = "hello, world!"
 print(a[1])
 print('\n----\n')
 
 
-# Loop through the letters in the word "banana":
+print('loop through the letters in the str "banana"'):
 for x in "banana":
   print(x)
 print('\n----\n')
 
-# Length
-a = "Hello, World!"
+print('length for str')
+a = "hello, world!"
 print(len(a))
 print('\n----\n')
 
-# Check if "free" is present in the following text:
-txt = "The best things in life are free!"
+print('check if "free" is present in the following text')
+txt = "the best things in life are free!"
 print("free" in txt)
 print('\n----\n')
 
-# Use it in an if statement:
-txt = "The best things in life are free!"
+print('use it in an if statement')
+txt = "the best things in life are free!"
 if "free" in txt:
-  print("Yes, 'free' is present.")
+  print("yes, 'free' is present.")
 print('\n----\n')
 
-# Check if NOT
-txt = "The best things in life are free!"
+print('check if not')
+txt = "the best things in life are free!"
 print("expensive" not in txt)
 print('\n----\n')
 
-# Use it in an if statement:
-txt = "The best things in life are free!"
+print('use it in an if statement')
+txt = "the best things in life are free!"
 if "expensive" not in txt:
-  print("Yes, 'expensive' is NOT present.")
+  print("yes, 'expensive' is not present.")

@@ -1,34 +1,34 @@
 
-# remove
+print('remove')
 thislist = ["apple", "banana", "cherry"]
 thislist.remove("banana")
 print(thislist)
 print('\n----\n')
 
-# pop
+print('pop')
 thislist = ["apple", "banana", "cherry"]
 thislist.pop()
 print(thislist)
 print('\n----\n')
 
-# pop specific
+print('pop specific')
 thislist = ["apple", "banana", "cherry"]
 thislist.pop(1)
 print(thislist)
 print('\n----\n')
 
-# del
+print('del')
 thislist = ["apple", "banana", "cherry"]
 del thislist
 print('\n----\n')
 
-# del specific
+print('del specific')
 thislist = ["apple", "banana", "cherry"]
 del thislist[0]
 print(thislist)
 print('\n----\n')
 
-# clear
+print('clear')
 thislist = ["apple", "banana", "cherry"]
 thislist.clear()
 print(thislist)

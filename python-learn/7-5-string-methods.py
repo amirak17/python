@@ -1,195 +1,192 @@
 
 # https://www.w3schools.com/python/python_strings_methods.asp
 
-def prline():
-    print('\n------\n')
-
-prline()
+print('\n------\n')
 
 # capitalize
 print('capitalize:')
 txt = "hello, and welcome to my world."
 x = txt.capitalize()
 print(x)
-prline()
+print('\n------\n')
 
 # casefold
 print('casefold:')
 txt = "Hello, and Welcome to my world."
 x = txt.casefold()
 print(x)
-prline()
+print('\n------\n')
 
 # center
 print('center:')
 txt = "banana"
 x = txt.center(20)
 print(x)
-prline()
+print('\n------\n')
 
 # count
 print('count:')
 txt = "I love apples, apple are my favorite fruit"
 x = txt.count("apple")
 print(x)
-prline()
+print('\n------\n')
 
 # encode
 print('encode:')
 txt = "My name is Ståle"
 x = txt.encode()
 print(x)
-prline()
+print('\n------\n')
 
 # endswith
 print('endswith:')
 txt = "Hello, welcome to my world."
 x = txt.endswith(".")
 print(x)
-prline()
+print('\n------\n')
 
 # expandtabs
 print('expandtabs:')
 txt = "H\te\tl\tl\to"
 x =  txt.expandtabs(2)
 print(x)
-prline()
+print('\n------\n')
 
 # find
 txt = "Hello, welcome to my world."
 x = txt.find("welcome") # 7
 print(x)
-prline()
+print('\n------\n')
 
 # format
 # https://www.w3schools.com/python/ref_string_format.asp
 txt = "For only {price:.2f} dollars!"
 print(txt.format(price = 49))
-prline()
+print('\n------\n')
 
 # index
 txt = "Hello, welcome to my world."
 x = txt.index("welcome")
 print(x)
-prline()
+print('\n------\n')
 
 # isalnum
 txt = "Company12"
 x = txt.isalnum()
 print(x)
-prline()
+print('\n------\n')
 
 # isalpha
 txt = "CompanyX"
 x = txt.isalpha()
 print(x)
-prline()
+print('\n------\n')
 
 # isdecimal
 txt = "\u0033" #unicode for 3
 x = txt.isdecimal()
 print(x)
-prline()
+print('\n------\n')
 
 # isdigit
 txt = "50800"
 x = txt.isdigit()
 print(x)
-prline()
+print('\n------\n')
 
 # isidentifier
 txt = "Demo"
 x = txt.isidentifier()
 print(x)
-prline()
+print('\n------\n')
 
 # islower
 txt = "hello world!"
 x = txt.islower()
 print(x)
-prline()
+print('\n------\n')
 
 # isnumeric
 txt = "565543"
 x = txt.isnumeric()
 print(x)
-prline()
+print('\n------\n')
 
 # isprintable
 txt = "Hello! Are you #1?"
 x = txt.isprintable()
 print(x)
-prline()
+print('\n------\n')
 
 # isspace
 txt = "   "
 # txt = " A "
 x = txt.isspace()
 print(x)
-prline()
+print('\n------\n')
 
 # istitle
 txt = "Hello, And Welcome To My World!"
 # txt = "hello, and welcome to my world!"
 x = txt.istitle()
 print(x)
-prline()
+print('\n------\n')
 
 # isupper
 txt = "THIS IS NOW!"
 # txt = "tHIS IS NOW!"
 x = txt.isupper()
 print(x)
-prline()
+print('\n------\n')
 
 # join
 myTuple = ("John", "Peter", "Vicky")
 x = "#".join(myTuple)
 print(x)
-prline()
+print('\n------\n')
 
 # ljust
 txt = "banana"
 x = txt.ljust(20)
 print(x, "is my favorite fruit.")
-prline()
+print('\n------\n')
 
 # lower
 txt = "Hello my FRIENDS"
 x = txt.lower()
 print(x)
-prline()
+print('\n------\n')
 
 # lstrip
 txt = "     banana     "
 x = txt.lstrip()
 print("of all fruits", x, "is my favorite")
-prline()
+print('\n------\n')
 
 # maketrans
 txt = "Hello Sam!";
 mytable = txt.maketrans("S", "P");
 print(txt.translate(mytable));
-prline()
+print('\n------\n')
 
 # partition
 txt = "I could eat bananas all day"
 x = txt.partition("bananas")
 print(x)
 print(type(x))
-prline()
+print('\n------\n')
 
 # replace
 txt = "I like bananas"
 x = txt.replace("bananas", "apples")
 print(x)
-prline()
+print('\n------\n')
 
 # rfind - last occurrence of the string
 txt = "Mi casa, su casa."
 x = txt.rfind("casa")
 print(x)
-prline()
+print('\n------\n')
 
 # rindex - last occurrence of the string - search between position 5 and 10
 txt = "Hello, welcome to my world."
@@ -203,87 +200,87 @@ print(x)
 txt = "Hello, welcome to my world."
 print(txt.rfind("q"))
 # print(txt.rindex("q"))
-prline()
+print('\n------\n')
 
 # rjust
 txt = "banana"
 x = txt.rjust(20)
 print(x, "is my favorite fruit.")
-prline()
+print('\n------\n')
 
 # rpartition
 txt = "I could eat bananas all day, bananas are my favorite fruit"
 x = txt.rpartition("bananas")
 print(x)
 print(type(x))
-prline()
+print('\n------\n')
 
 # rsplit
 txt = "apple, banana, cherry"
 x = txt.rsplit(", ")
 print(x)
 print(type(x))
-prline()
+print('\n------\n')
 
 # rstrip
 txt = "     banana     "
 x = txt.rstrip()
 print("of all fruits", x, "is my favorite")
-prline()
+print('\n------\n')
 
 # split
 txt = "welcome to the jungle"
 x = txt.split()
 print(x)
 print(type(x))
-prline()
+print('\n------\n')
 
 # splitlines
 txt = "Thank you for the music\nWelcome to the jungle"
 x = txt.splitlines()
 print(x)
 print(type(x))
-prline()
+print('\n------\n')
 
 # startswith
 txt = "Hello, welcome to my world."
 x = txt.startswith("Hello")
 print(x)
-prline()
+print('\n------\n')
 
 # strip
 txt = "     banana     "
 x = txt.strip()
 print("of all fruits", x, "is my favorite")
-prline()
+print('\n------\n')
 
 # swapcase
 txt = "Hello My Name Is PETER"
 x = txt.swapcase()
 print(x)
-prline()
+print('\n------\n')
 
 # title
 txt = "Welcome to my world"
 x = txt.title()
 print(x)
-prline()
+print('\n------\n')
 
 # translate
 #use a dictionary with ascii codes to replace 83 (S) with 80 (P):
 mydict = {83:  80};
 txt = "Hello Sam!";
 print(txt.translate(mydict));
-prline()
+print('\n------\n')
 
 # upper
 txt = "Hello my friends"
 x = txt.upper()
 print(x)
-prline()
+print('\n------\n')
 
 # zfill - zero fill
 txt = "50"
 x = txt.zfill(10)
 print(x)
-prline()
+print('\n------\n')

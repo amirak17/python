@@ -11,7 +11,7 @@ Greater than or equal to: a >= b
 These conditions can be used in several ways, most commonly in "if statements" and loops.
 """
 
-# if statement:
+print('if statement')
 a = 33
 b = 200
 if b > a:
@@ -27,7 +27,7 @@ b = 200
 
 print('\n----\n')
 
-# elif
+print('elif')
 a = 33
 b = 33
 if b > a:
@@ -37,7 +37,7 @@ elif a == b:
 
 print('\n----\n')
 
-# Example 1
+print('if elif else')
 a = 200
 b = 33
 if b > a:
@@ -49,7 +49,7 @@ else:
 
 print('\n----\n')
 
-# Example 2
+print('if > else')
 a = 200
 b = 33
 if b > a:
@@ -59,12 +59,12 @@ else:
 
 print('\n----\n')
 
-# short hand if
+print('short hand if')
 if a > b: print("a is greater than b")
 
 print('\n----\n')
 
-# one line if else statement:
+print('one line if else statement')
 a = 2
 b = 330
 print("A") if a > b else print("B")
@@ -72,21 +72,21 @@ print("A") if a > b else print("B")
 print('\n----\n')
 
 
-# ternary operators, or conditional expressions.
+print('ternary operators, or conditional expressions')
 a = 330
 b = 330
 print("A") if a > b else print("=") if a == b else print("B")
 
 print('\n----\n')
 
-# and
+print('and')
 a = 200
 b = 33
 c = 500
 if a > b and c > a:
   print("Both conditions are True")
 
-# or
+print('or')
 a = 200
 b = 33
 c = 500
@@ -95,7 +95,7 @@ if a > b or a > c:
 
 print('\n----\n')
 
-# nested if
+print('nested if')
 x = 41
 
 if x > 10:
@@ -107,10 +107,9 @@ if x > 10:
 
 print('\n----\n')
 
-# the pass statement
+print('the pass statement')
 
 a = 33
 b = 200
-
 if b > a:
   pass
