@@ -9,8 +9,8 @@ x = np.array([2,2,8,1,15,8,12,9,7,3,11,4,7,14,12])
 y = np.array([100,105,84,105,90,99,90,95,94,100,79,112,91,80,85])
 plt.scatter(x, y, color = '#88c999')
 
-plt.savefig('plot.jpg')
-plt.savefig('plot.png')
-plt.savefig('plot.pdf')
+plt.savefig('32-plot.jpg')
+plt.savefig('32-plot.png')
+plt.savefig('32-plot.pdf')
 
 plt.show()
