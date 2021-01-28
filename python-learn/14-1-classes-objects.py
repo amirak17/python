@@ -22,7 +22,7 @@ class Person:
     self.name = name
     self.age = age
 
-p1 = Person("John", 36)
+p1 = Person("Adam", 36)
 
 print(p1.name)
 print(p1.age)
@@ -44,7 +44,7 @@ class Person:
   def myfunc(self):
     print("Hello my name is " + self.name)
 
-p1 = Person("John", 36)
+p1 = Person("Adam", 36)
 p1.myfunc()
 
 print('\n----\n')
@@ -64,7 +64,7 @@ class Person:
   def myfunc(abc):
     print("Hello my name is " + abc.name)
 
-p1 = Person("John", 36)
+p1 = Person("Adam", 36)
 p1.myfunc()
 
 print('\n----\n')
@@ -99,9 +99,29 @@ print('\n----\n')
 
 print('The pass Statement')
 # class definitions cannot be empty, but if you for some reason have a class definition with no content, put in the pass statement to avoid getting an error.
-
-Example
-class Person:
+# Example
+class Man:
   pass
+print('\n----\n')
 
+
+
+
+print('Print Object Properties - Method 1')
+def dump(obj):
+  for attr in dir(obj):
+    print("obj.%s = %r" % (attr, getattr(obj, attr)))
+p1 = Person("Adam", 36)
+dump(p1)
+print('\n----\n')
+
+
+
+
+print('Print Object Properties - Method 2')
+def pprint_object(obj):
+    from pprint import pprint
+    pprint(vars(obj))
+p2 = Person("Adam", 50)
+dump(p2)
 print('\n----\n')
