@@ -1,7 +1,7 @@
 # pip install mysql-connector-python
 import mysql.connector
 
-db = mysql.connector.connect(host="localhost", user="test", password="vertic06", database="test")
+db = mysql.connector.connect(host="localhost", user="test", password="pwd", database="test")
 cursor = db.cursor()
 
 sql = 'INSERT INTO stocks (dt_stamp, closing, symbol) VALUES (%s, %s, %s)'

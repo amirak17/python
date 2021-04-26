@@ -1,7 +1,7 @@
 # pip install mysql-connector-python
 import mysql.connector
 
-db = mysql.connector.connect(host="localhost", user="test", password="vertic06", database="test")
+db = mysql.connector.connect(host="localhost", user="test", password="pwd", database="test")
 cursor = db.cursor(buffered=True, dictionary=True)
 
 sql = 'SELECT * FROM symbols'
