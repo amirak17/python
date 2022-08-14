@@ -17,3 +17,5 @@ for i in range(1000):
 		plt.pause(0.0001)
 
 plt.show()
+
+# https://www.youtube.com/watch?v=7RgoHTMbp4A
