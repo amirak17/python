@@ -1,3 +1,5 @@
+# Library of some of the practical and complex function in Python 3+
+# amir.aakhan@gmail.com
 
 
 def get_url_contents(url):
@@ -104,4 +106,3 @@ def get_coords_address(lat, long, key):
     else:
         return ''
     
-
