@@ -80,3 +80,28 @@ def copy_file(old_file, new_file):
 
 def slugit(x):
     return x.replace(" ", "-").lower()
+
+
+def get_address_coords(addr, key):
+    import requests
+    req = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+addr+'&key='+key)
+    resp = req.json()
+
+    if resp['status'] != 'ZERO_RESULTS':
+        lat = resp['results'][0]['geometry']['location']['lat']
+        long = resp['results'][0]['geometry']['location']['lng']
+        return lat, long
+    else:
+        return 0, 0
+
+
+def get_coords_address(lat, long, key):
+    from geopy.geocoders import GoogleV3
+    geolocator = GoogleV3(api_key='AIzaSyDew8c1Yfyd8PSqnOm8tUoInlIKF7kjKcE')
+    loc = geolocator.reverse(str(lat)+','+ str(long))
+    if loc != None:
+        return loc.address
+    else:
+        return ''
+    
+
