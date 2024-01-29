@@ -97,7 +97,7 @@ def get_address_coords(addr, key):
 
 def get_coords_address(lat, long, key):
     from geopy.geocoders import GoogleV3
-    geolocator = GoogleV3(api_key='AIzaSyDew8c1Yfyd8PSqnOm8tUoInlIKF7kjKcE')
+    geolocator = GoogleV3(api_key=key)
     loc = geolocator.reverse(str(lat)+','+ str(long))
     if loc != None:
         return loc.address
