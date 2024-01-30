@@ -1,6 +1,5 @@
-# Library of some of the practical, complex and 
-# regularly used functions in Python 3+
-# Have Questions? amir.aakhan@gmail.com
+# Library of some of the practical and complex function in Python 3+
+# amir.aakhan@gmail.com
 
 
 def get_url_contents(url):
@@ -11,24 +10,21 @@ def get_url_contents(url):
     data = urlopen(url, context=ssl.create_default_context(cafile=certifi.where()))
     return data.read().decode("utf-8") 
 
-
 def get_file_contents(path_file):
     from pathlib import Path
     return Path(path_file).read_text()
 
-
 def get_string_between(s, start, end):
     return s.split(start)[1].split(end)[0]
 
-
 def get_array_strings_between(str, start, end):
+
     strings = []
     for c in str.split(start): 
         spos = c.find(end)
         if spos!=-1:
             strings.append(c[:spos])
     return strings
-
 
 def remove_html(x):
     import re
@@ -61,6 +57,7 @@ def send_mail(to_email, subject, message, from_name, domain, pwd):
 
 
 def get_public_ip():
+
     import os
     ifconfig = str(os.popen("ifconfig").read()).split('\n')
     return get_string_between(ifconfig[1], 'inet ', '  netmask')
@@ -109,3 +106,17 @@ def get_coords_address(lat, long, key):
     else:
         return ''
     
+
+def py_mkdir(path):
+    import os
+    os.makedirs(path, exist_ok=True)
+
+
+def webp2jpg(webp_file, to_file, to_format):
+    from PIL import Image
+    im = Image.open(webp_file).convert("RGB")
+    if(to_format == 'jpeg'):
+        ext = x = to_format.replace('jpeg', 'jpg')
+    else:
+        ext = to_format
+    im.save(to_file+'.'+ext, to_format)
