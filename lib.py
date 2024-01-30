@@ -113,6 +113,7 @@ def py_mkdir(path):
 
 
 def webp2jpg(webp_file, to_file, to_format):
+    # pip3 install Pillow
     from PIL import Image
     im = Image.open(webp_file).convert("RGB")
     if(to_format == 'jpeg'):
