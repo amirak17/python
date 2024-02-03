@@ -10,12 +10,19 @@ def get_url_contents(url):
     data = urlopen(url, context=ssl.create_default_context(cafile=certifi.where()))
     return data.read().decode("utf-8") 
 
+
+def get_url_contents2(url):
+    import os
+    return os.popen("curl -s "+url).read()
+
 def get_file_contents(path_file):
     from pathlib import Path
     return Path(path_file).read_text()
 
+
 def get_string_between(s, start, end):
     return s.split(start)[1].split(end)[0]
+
 
 def get_array_strings_between(str, start, end):
 
@@ -25,6 +32,7 @@ def get_array_strings_between(str, start, end):
         if spos!=-1:
             strings.append(c[:spos])
     return strings
+
 
 def remove_html(x):
     import re
@@ -121,3 +129,15 @@ def webp2jpg(webp_file, to_file, to_format):
     else:
         ext = to_format
     im.save(to_file+'.'+ext, to_format)
+
+
+def remove_whitespace(x):
+    return ' '.join(x.strip().split())
+
+
+def get_url_json(url):
+    import json
+    c = get_url_contents2(url)
+    return json.loads(c)
+
+
