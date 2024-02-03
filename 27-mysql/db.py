@@ -22,7 +22,4 @@ CREATE TABLE `stocks` (
   KEY `symbol` (`symbol`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci
 
-INSERT INTO stocks (id, dt_stamp, closing, symbol) VALUES (1, '1970-01-01', 100.00, 'AAPL');
-INSERT INTO stocks (id, dt_stamp, closing, symbol) VALUES (2, '1970-01-02', 200.00, 'GOOG');
-
 '''
