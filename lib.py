@@ -141,3 +141,11 @@ def get_url_json(url):
     return json.loads(c)
 
 
+def today_datetime_formatted(f):
+    # %d/%m/%Y %H:%M:%S
+    from datetime import date
+    return date.today().strftime(f)
+
+def read_file(f):
+    return open(f, "r").read()
+
