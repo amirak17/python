@@ -149,3 +149,85 @@ def today_datetime_formatted(f):
 def read_file(f):
     return open(f, "r").read()
 
+
+def get_url_emulate(url):
+    import requests
+    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+    response = requests.get(url, headers=headers)
+    return response.content
+
+def str_replace(srch, rplc, sbjct):
+    if len(sbjct) == 0:
+        return ''
+
+    if len(srch) == 1:
+        return sbjct.replace(srch[0], rplc[0])
+
+    lst = sbjct.split(srch[0])
+    reslst = []
+    for s in lst:
+        reslst.append(str_replace(s, srch[1:], rplc[1:]))
+    return rplc[0].join(reslst);
+
+
+def django_mysql_format(dt):
+    from dateutil.parser import parse
+    d = parse(str(dt))
+    return d.strftime("%Y-%m-%d")
+
+def get_todate():
+    import datetime
+    return datetime.datetime.now().date()
+
+def set_session(request, param, value):
+    request.session[param] = value
+
+def get_session_param(request, param):
+    return request.session.get(param)
+
+def get_session_all(request):
+    c = {}
+    c['fname'] = request.session.get('fname')
+    c['email'] = request.session.get('email')
+    c['company_id'] = request.session.get('company_id')
+    c['company_name'] = request.session.get('company_name')
+    return c
+
+def logout(request):
+    for key in request.session.keys():
+        request.session[key] = ''
+    return redirect('/')
+
+def get_random(x, y):
+    import random
+    return random.randint(x, y)
+
+
+def raw_db_sql(sql, keys):
+    from django.db import connection, transaction
+    cursor = connection.cursor()
+
+    # usage    
+    # keys = ('fname', 'email')
+    # sql = "SELECT m.fname, m.email FROM team_member m"
+    # m = raw_db_sql(sql, keys)
+    # c['fname'] = m[0]['fname']
+
+    # eg 2
+    # cursor.execute("SELECT foo FROM bar WHERE baz = %s", [self.baz])
+
+    # eg 3: update etc
+    # # cursor.execute("UPDATE bar SET foo = 1 WHERE baz = %s", [self.baz])
+    # # transaction.commit_unless_managed()
+
+    cursor.execute(sql)
+    rows = cursor.fetchall()
+    return db2json(rows, keys)
+
+def db2json(rows, keys):
+    import json
+    result = []
+    for row in rows:
+        result.append(dict(zip(keys,row)))
+    json_data = json.dumps(result)
+    return  json.loads(json_data)
