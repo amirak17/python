@@ -231,3 +231,11 @@ def db2json(rows, keys):
         result.append(dict(zip(keys,row)))
     json_data = json.dumps(result)
     return  json.loads(json_data)
+
+
+def list_str_diff(list1, list2):
+    res = [ ele for ele in list1 ]
+    for a in list2:
+        if a in list1:
+            res.remove(a)
+    return res
